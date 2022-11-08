@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:motsha_app/screen/add_fisherman_info.dart';
+import 'package:motsha_app/screen/notice_page.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class MatshoWebPage extends StatefulWidget {
@@ -22,6 +23,25 @@ class _MatshoWebPageState extends State<MatshoWebPage> {
           initialUrl: "https://app.rdtl.xyz/",
           javascriptMode: JavascriptMode.unrestricted,
         ),
+        Positioned(
+            right: 0,
+            top: 200,
+            child: Container(
+              height: 40,
+              width: 100,
+              child: Row(
+                children: [
+                  Text(
+                    "More",
+                    style: TextStyle(
+                        fontSize: 20, decoration: TextDecoration.none),
+                  )
+                ],
+              ),
+              decoration: BoxDecoration(
+                color: Colors.black,
+              ),
+            )),
         Positioned(
             right: 0,
             top: 20,
@@ -51,7 +71,7 @@ class _MatshoWebPageState extends State<MatshoWebPage> {
             child: GestureDetector(
               onTap: (() {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: ((context) => AddFisherMan())));
+                    MaterialPageRoute(builder: ((context) => NoticePage())));
               }),
               child: Container(
                 height: 40,
