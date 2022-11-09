@@ -25,26 +25,25 @@ class _MatshoWebPageState extends State<MatshoWebPage> {
         ),
         Positioned(
             right: 0,
-            top: 200,
-            child: Container(
-              height: 40,
-              width: 100,
-              child: Row(
-                children: [
-                  Text(
-                    "More",
-                    style: TextStyle(
-                        fontSize: 20, decoration: TextDecoration.none),
-                  )
-                ],
-              ),
-              decoration: BoxDecoration(
-                color: Colors.black,
+            top: 15,
+            child: GestureDetector(
+              onTap: () {},
+              child: Container(
+                height: 40,
+                width: 100,
+                child: Icon(
+                  Icons.menu,
+                  color: Colors.red,
+                  size: 40,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
               ),
             )),
         Positioned(
             right: 0,
-            top: 20,
+            top: 140,
             child: GestureDetector(
               onTap: (() {
                 Navigator.of(context).push(

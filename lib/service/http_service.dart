@@ -20,8 +20,8 @@ class HttpService {
         var data = jsonDecode(response.body);
 
         var fetchedData = data['data'];
-        //print(data['data']);
-        // print(fetchedData);
+        print(data['data']);
+        print(fetchedData);
 
         for (var i in fetchedData) {
           noticeData.add(Data(
