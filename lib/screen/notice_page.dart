@@ -101,6 +101,9 @@ class _NoticePageState extends State<NoticePage> {
                                     color: Colors.green,
                                   )),
                               Text("${noticeData[index].description}"),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: Text("Click here to download pdf"))
                             ],
                           ),
                         ),

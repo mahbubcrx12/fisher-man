@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:motsha_app/screen/add_fisherman_info.dart';
 import 'package:motsha_app/screen/notice_page.dart';
+import 'package:motsha_app/screen/fisherman_search_box.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class MatshoWebPage extends StatefulWidget {
@@ -25,9 +26,112 @@ class _MatshoWebPageState extends State<MatshoWebPage> {
         ),
         Positioned(
             right: 0,
-            top: 15,
+            top: 10,
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text("select an option"),
+                        content: Container(
+                          height: 200,
+                          child: Column(
+                            children: [
+                              GestureDetector(
+                                onTap: (() {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: ((context) => AddFisherMan())));
+                                }),
+                                child: Container(
+                                  height: 40,
+                                  width: 200,
+                                  decoration: BoxDecoration(
+                                      color: Colors.teal.withOpacity(.8)),
+                                  child: Center(
+                                    child: Text(
+                                      "Registration",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.yellowAccent,
+                                          fontWeight: FontWeight.w400,
+                                          decoration: TextDecoration.none),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              GestureDetector(
+                                onTap: (() {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: ((context) => NoticePage())));
+                                }),
+                                child: Container(
+                                  height: 40,
+                                  width: 200,
+                                  decoration: BoxDecoration(
+                                      color: Colors.red.withOpacity(.8)),
+                                  child: Center(
+                                    child: Text(
+                                      "Notice",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.yellow,
+                                          fontWeight: FontWeight.w400,
+                                          decoration: TextDecoration.none),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              GestureDetector(
+                                onTap: (() {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: ((context) =>
+                                          SearchFisherMan())));
+                                }),
+                                child: Container(
+                                  height: 40,
+                                  width: 200,
+                                  decoration: BoxDecoration(
+                                      color: Colors.black.withOpacity(.8)),
+                                  child: Center(
+                                    child: Text(
+                                      "Search",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.yellow,
+                                          fontWeight: FontWeight.w400,
+                                          decoration: TextDecoration.none),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: Container(
+                                  height: 40,
+                                  width: 80,
+                                  decoration: BoxDecoration(
+                                      color: Colors.black26,
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Icon(
+                                    Icons.arrow_back,
+                                    size: 30,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      );
+                    });
+              },
               child: Container(
                 height: 40,
                 width: 100,
@@ -41,75 +145,6 @@ class _MatshoWebPageState extends State<MatshoWebPage> {
                 ),
               ),
             )),
-        Positioned(
-            right: 0,
-            top: 140,
-            child: GestureDetector(
-              onTap: (() {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: ((context) => AddFisherMan())));
-              }),
-              child: Container(
-                height: 40,
-                width: 100,
-                decoration: BoxDecoration(color: Colors.teal.withOpacity(.8)),
-                child: Center(
-                  child: Text(
-                    "Reg.",
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.yellow,
-                        decoration: TextDecoration.none),
-                  ),
-                ),
-              ),
-            )),
-        Positioned(
-            right: 0,
-            top: 60,
-            child: GestureDetector(
-              onTap: (() {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: ((context) => NoticePage())));
-              }),
-              child: Container(
-                height: 40,
-                width: 100,
-                decoration: BoxDecoration(color: Colors.red.withOpacity(.8)),
-                child: Center(
-                  child: Text(
-                    "Notice",
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.yellow,
-                        decoration: TextDecoration.none),
-                  ),
-                ),
-              ),
-            )),
-        Positioned(
-            right: 0,
-            top: 100,
-            child: GestureDetector(
-              onTap: (() {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: ((context) => AddFisherMan())));
-              }),
-              child: Container(
-                height: 40,
-                width: 100,
-                decoration: BoxDecoration(color: Colors.black.withOpacity(.8)),
-                child: Center(
-                  child: Text(
-                    "Search",
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.yellow,
-                        decoration: TextDecoration.none),
-                  ),
-                ),
-              ),
-            ))
       ],
     ));
   }
