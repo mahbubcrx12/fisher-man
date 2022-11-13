@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:motsha_app/provider/fisherman_details_provider.dart';
 import 'package:motsha_app/provider/notice_provider.dart';
-import 'package:motsha_app/screen/fisherman_search_box.dart';
 import 'package:motsha_app/screen/splash.dart';
 import 'package:provider/provider.dart';
 

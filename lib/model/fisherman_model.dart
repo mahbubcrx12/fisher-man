@@ -32,9 +32,9 @@ class Data {
   String? gender;
   String? mothersName;
   String? fathersName;
-  Null? spouseName;
+  String? spouseName;//null
   String? dateOfBirth;
-  Null? mobile;
+  String? mobile;//null
   String? permanentDivision;
   String? permanentDistrict;
   String? permanentUpazilla;
@@ -51,7 +51,7 @@ class Data {
   String? numberOfMother;
   String? numberOfFather;
   String? numberOfDaughter;
-  Null? numberOfSon;
+  String? numberOfSon;//null
   String? nationality;
   String? presentDivision;
   String? presentDistrict;
@@ -62,21 +62,21 @@ class Data {
   String? presentPostOffice;
   String? timeOfFishing;
   String? typeOfFishing;
-  Null? groupMember;
+  String? groupMember;//null
   String? ownerOfNet;
   String? lengthOfNet;
   String? widthOfNet;
   String? priceOfNet;
-  Null? sourceOfPurchaseOfNet;
+  String? sourceOfPurchaseOfNet;//null
   String? typeOfVessel;
   String? ownerOfVessel;
-  Null? lengthOfVessels;
-  Null? widthOfVessels;
-  Null? heightOfVessels;
-  Null? priceOfVessels;
+  String? lengthOfVessels;//nul
+  String? widthOfVessels;//null
+  String? heightOfVessels;//null
+  String? priceOfVessels;//null
   String? typeOfEmploymentonVessel;
   String? mainProfession;
-  Null? subProfession;
+  String? subProfession;//null
   String? annualIncome;
   String? fishermenYearlyLoan;
   String? fishermenYearlySaving;

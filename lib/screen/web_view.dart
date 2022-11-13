@@ -4,7 +4,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:motsha_app/screen/add_fisherman_info.dart';
 import 'package:motsha_app/screen/notice_page.dart';
-import 'package:motsha_app/screen/fisherman_search_box.dart';
+import 'package:motsha_app/screen/search_fisherman.dart';
+import 'package:motsha_app/screen/searched_information.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class MatshoWebPage extends StatefulWidget {
@@ -88,7 +89,7 @@ class _MatshoWebPageState extends State<MatshoWebPage> {
                                 onTap: (() {
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: ((context) =>
-                                          SearchFisherMan())));
+                                      SearchHere())));
                                 }),
                                 child: Container(
                                   height: 40,
