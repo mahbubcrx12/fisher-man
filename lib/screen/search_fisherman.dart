@@ -9,19 +9,20 @@ class SearchHere extends StatefulWidget {
 }
 
 class _SearchHereState extends State<SearchHere> {
-  TextEditingController filterController=TextEditingController();
+  TextEditingController filterController = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Search Fisherman",style: TextStyle(
-            color: Colors.black
-        ),),
+        title: Text(
+          "Search Fisherman",
+          style: TextStyle(color: Colors.black),
+        ),
         centerTitle: true,
         backgroundColor: Colors.white,
       ),
-      body:
-      Container(
+      body: Container(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -48,17 +49,21 @@ class _SearchHereState extends State<SearchHere> {
                               color: Colors.green, width: 2.0)),
                       border: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.green,
-                            width: 20,
-                          ))),
+                        color: Colors.green,
+                        width: 20,
+                      ))),
                 ),
               ),
               ElevatedButton(
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.green)),
                   onPressed: () {
+
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (_)=>SearchFisherMan()));
+                        builder: (_) => SearchFisherMan(
+                              searchInput: filterController.text,
+                            )));
+
                   },
                   child: Text("Search"))
             ],
@@ -68,4 +73,3 @@ class _SearchHereState extends State<SearchHere> {
     );
   }
 }
-

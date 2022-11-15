@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:motsha_app/provider/fisherman_details_provider.dart';
 import 'package:motsha_app/provider/notice_provider.dart';
+import 'package:motsha_app/screen/search_fisherman.dart';
+import 'package:motsha_app/screen/searched_information.dart';
 import 'package:motsha_app/screen/splash.dart';
 import 'package:provider/provider.dart';
 
@@ -26,8 +28,8 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
        //  home: SplashScreen()),
-         home: SplashScreen()),
-
+       //  home: SplashScreen()),
+          home: SearchHere()),
     );
   }
 }

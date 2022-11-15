@@ -6,16 +6,18 @@ class GetFishermanDetails {
   static const Map<String, String> defaultHeader = {
     "Accept": "application/json",
   };
+String userInput="2220250";
+  Future<dynamic> fetchFisherman(userInput) async {
 
-  Future<dynamic> fetchFisherman() async {
     List<Data> fishermanData = [];
     try {
-      var link = "http://dof-demo.rdtl.xyz/api/fisher/get-details/2220250";
+      var link = "http://dof-demo.rdtl.xyz/api/fisher/get-details/${userInput}";
       var response =
       await http.get(Uri.parse(link), headers: await defaultHeader);
 
       print(response.statusCode);
       if (response.statusCode == 200) {
+
         var data = jsonDecode(response.body);
         print("ggggggggggggg $data");
 

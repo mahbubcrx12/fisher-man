@@ -5,7 +5,7 @@ import '../model/fisherman_model.dart';
 class FishermanDetailsProvider with ChangeNotifier {
   List<Data> fishermanDetailsData = [];
   getFishermanData() async {
-    fishermanDetailsData = await GetFishermanDetails().fetchFisherman();
+    fishermanDetailsData = await GetFishermanDetails().fetchFisherman("2220250");
     notifyListeners();
   }
 }
